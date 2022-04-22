@@ -1,0 +1,26 @@
+---
+import PageLayout from '../layouts/pageLayout.astro'
+const {content} = Astro.props;
+---
+
+<PageLayout content={content}>
+<article>
+<header><h2>Card's Header: {content.title}</h2>
+</header>
+<div>
+<p>Card's content</p>
+    <slot />
+</div>
+<footer>
+<p>Card's footer</p>
+</footer>
+</article>
+
+<style>
+    article {
+        background-color: coral;
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+</PageLayout>

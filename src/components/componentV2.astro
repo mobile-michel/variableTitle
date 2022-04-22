@@ -1,0 +1,22 @@
+---
+const {content} = Astro.props;
+---
+
+<article>
+<header><h2>Card's Header: {content.title}</h2>
+</header>
+<div>
+<p>Card's content</p>
+</div>
+<footer>
+<p>Card's footer</p>
+</footer>
+</article>
+
+<style>
+    article {
+        background-color: coral;
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>

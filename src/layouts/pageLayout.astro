@@ -1,0 +1,33 @@
+---
+const {content} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{content.title}</title>
+</head>
+<body>
+    <header>
+        <h1>{content.title}</h1>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li><a href="/">Astro 2 files</a></li>
+                <li><a href="/twoFilesMd">Markdown 2 files</a></li>
+                <li><a href="/threeFiles">Astro 3 files</a></li>
+                <li><a href="/threeFilesMd">Markdown 3 files</a></li>
+                <li><a href="/threeFilesV2">Astro 3 files version 2</a></li>
+                <li><a href="/threeFilesMdV2">Markdown 3 files version 2</a></li>
+            </ul>
+        </aside>
+        <section>
+            <slot />
+        </section>
+    </main>
+    <footer><p>Footer</p></footer>
+</body>
+</html>
